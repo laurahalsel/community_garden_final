@@ -51,6 +51,33 @@
                             </div>
                         </div>
 
+                        
+                        <div class="form-group row">
+                            <label for="soil" class="col-md-4 col-form-label text-md-right">{{ __('Soil Type') }}</label>
+
+                            <div class="col-sm-6">	
+                                    <select class="form-control" name="soil" id="soil">
+                                        <option value="">Select Soil Type</option>
+                                        @foreach($soils as $soil)
+                                            <option value="{{$soil->id}}">{{$soil->name}}</option>
+                                        @endforeach
+                                    </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="pot" class="col-md-4 col-form-label text-md-right">{{ __('Pot Type') }}</label>
+
+                            <div class="col-sm-6">	
+                                    <select class="form-control" name="pot" id="pot">
+                                        <option value="">Select Pot Type</option>
+                                        @foreach($pots as $pot)
+                                            <option value="{{$pot->id}}">{{$pot->name}}</option>
+                                        @endforeach
+                                    </select>
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="comments" class="col-md-4 col-form-label text-md-right">{{ __('Comments') }}</label>
 
@@ -64,9 +91,6 @@
                                 @endif
                             </div>
                         </div>
-
-                     
-                    
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

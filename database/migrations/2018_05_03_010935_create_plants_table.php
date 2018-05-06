@@ -18,6 +18,8 @@ class CreatePlantsTable extends Migration
             $table->integer('systemID');
             $table->integer('roomID');
             $table->integer('planttypeID');
+            $table->integer('soilID');
+            $table->integer('potsID');
             $table->string('name');
             $table->string('comments')->nullable();
             $table->string('imageFileName')->nullable();

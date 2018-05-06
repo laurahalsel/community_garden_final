@@ -49,6 +49,8 @@
                         @else
                         <li><a class="nav-link" href="/community">{{ __('Community') }}</a></li>
                         <li><a class="nav-link" href="/plants">{{ __('Plants') }}</a></li>
+                        <li><a class="nav-link" href="/soils">{{ __('Soils') }}</a></li>
+                        <li><a class="nav-link" href="/pots">{{ __('Pots') }}</a></li>
                         <li><a class="nav-link" href="/planttypes">{{ __('Plant Types') }}</a></li>
                         <li><a class="nav-link" href="/rooms">{{ __('Rooms') }}</a></li>
                         <li><a class="nav-link" href="/users">{{ __('Users') }}</a></li>

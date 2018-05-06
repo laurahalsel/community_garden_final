@@ -63,3 +63,17 @@ Route::post('/notes/{id}', 'NotesController@update')->name('notes.update');
 Route::get('/note/{entity}/{entityID}/destroy/{id}', 'NotesController@destroy')->name('note.destroy');
 
 Route::get('/community', 'CommunityController@index')->name('community.index');
+
+Route::get('/soils', 'SoilsController@index')->name('soils.index');
+Route::get('/soils/create', 'SoilsController@create')->name('soils.create');
+Route::get('/soils/edit/{id}', 'SoilsController@edit')->name('soils.edit');
+Route::post('/soils/store', 'SoilsController@store')->name('soils.store');
+Route::post('/soils/{id}', 'SoilsController@update')->name('soils.update');
+Route::get('/soils/destroy/{id}', 'SoilsController@destroy')->name('soils.destroy');
+
+Route::get('/pots', 'PotsController@index')->name('pots.index');
+Route::get('/pots/create', 'PotsController@create')->name('pots.create');
+Route::get('/pots/edit/{id}', 'PotsController@edit')->name('pots.edit');
+Route::post('/pots/store', 'PotsController@store')->name('pots.store');
+Route::post('/pots/{id}', 'PotsController@update')->name('pots.update');
+Route::get('/pots/destroy/{id}', 'PotsController@destroy')->name('pots.destroy');

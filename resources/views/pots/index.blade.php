@@ -6,26 +6,22 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Plants <br />
-                    <a href='/plants/create'>Add Plant</a>
+                    Pot Types <br />
+                    <a href='/pots/create'>Add Pot Type</a>
                 </div>
 
                 <div class="card-body">
                     <table class="table" border='1'>
                         <tr>
-                            <td></td>
                             <td>Name</td>
                             <td>Comments</td>
                             <td></td>
-                            <td></td>
                         </tr>
-                        @foreach($plants as $plant)
+                        @foreach($pots as $pot)
                             <tr>
-                                <td><img src='{{$plant['imageFileName'] }}' style="width: 50px;  height: 50px" class="rounded imgPopup"/></td>
-                                <td>{{ $plant['name'] }}</td>
-                                <td>{{ $plant['comments'] }}</td>
-                                <td><a href='/plants/edit/{{$plant['id']}}'>Edit</a></td>
-                                <td><a href='/notes/plant/{{$plant['id']}}'>Notes</a></td>
+                                <td>{{ $pot['name'] }}</td>
+                                <td>{{ $pot['comments'] }}</td>
+                                <td><a href='/pots/edit/{{ $pot['id'] }}'>Edit</a></td>
                             </tr>
                         @endforeach
                     </table>

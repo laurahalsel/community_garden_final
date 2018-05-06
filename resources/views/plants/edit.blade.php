@@ -65,6 +65,42 @@
                             </div>
                         </div>
 
+                          <div class="form-group row">
+                            <label for="soil" class="col-md-4 col-form-label text-md-right">{{ __('Soil Type') }}</label>
+
+                            <div class="col-sm-6">	
+                                    <select class="form-control" name="soil" id="soil">
+                                        <option value="">Select Soil Type</option>
+                                        @foreach($soils as $soil)
+                                            @if($soil->id == $soil->soilID)
+                                            <option value="{{$soil->id}}">{{$soil->name}}</option>
+                                                <option value="{{$soil->id}}" selected>{{$soil->name}}</option>
+                                            @else
+                                                <option value="{{$soil->id}}">{{$soil->name}}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                            </div>
+                        </div>
+
+                         <div class="form-group row">
+                            <label for="pot" class="col-md-4 col-form-label text-md-right">{{ __('Pot Type') }}</label>
+
+                            <div class="col-sm-6">	
+                                    <select class="form-control" name="soil" id="soil">
+                                        <option value="">Select Pot Type</option>
+                                        @foreach($pots as $pot)
+                                            @if($pot->id == $pot->potID)
+                                            <option value="{{$pot->id}}">{{$pot->name}}</option>
+                                                <option value="{{$pot->id}}" selected>{{$pot->name}}</option>
+                                            @else
+                                                <option value="{{$pot->id}}">{{$pot->name}}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="comments" class="col-md-4 col-form-label text-md-right">{{ __('Comments') }}</label>
 

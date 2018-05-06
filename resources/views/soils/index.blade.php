@@ -6,26 +6,22 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Plants <br />
-                    <a href='/plants/create'>Add Plant</a>
+                    Soil Types <br />
+                    <a href='/soils/create'>Add Soil Type</a>
                 </div>
 
                 <div class="card-body">
                     <table class="table" border='1'>
                         <tr>
-                            <td></td>
                             <td>Name</td>
                             <td>Comments</td>
                             <td></td>
-                            <td></td>
                         </tr>
-                        @foreach($plants as $plant)
+                        @foreach($soils as $soil)
                             <tr>
-                                <td><img src='{{$plant['imageFileName'] }}' style="width: 50px;  height: 50px" class="rounded imgPopup"/></td>
-                                <td>{{ $plant['name'] }}</td>
-                                <td>{{ $plant['comments'] }}</td>
-                                <td><a href='/plants/edit/{{$plant['id']}}'>Edit</a></td>
-                                <td><a href='/notes/plant/{{$plant['id']}}'>Notes</a></td>
+                                <td>{{ $soil['name'] }}</td>
+                                <td>{{ $soil['comments'] }}</td>
+                                <td><a href='/soils/edit/{{ $soil['id'] }}'>Edit</a></td>
                             </tr>
                         @endforeach
                     </table>
